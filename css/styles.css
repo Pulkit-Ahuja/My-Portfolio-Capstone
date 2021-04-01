@@ -1,0 +1,265 @@
+html{
+    overflow: hidden;
+    height: 100%;
+}
+body{
+    height: 100%;
+    overflow: auto;
+    color: #F7E9FF;
+    background-image: url('../images/fernando-hernandez-lVuV7AcfOrY-unsplash.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+}
+nav{
+    padding:15px;
+}
+.website-brand{
+    font-size: 130%;
+    font-weight: bold;
+    font-variant: small-caps;
+    font-family: 'Quicksand', sans-serif;
+}
+@keyframes list-enter{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+.navbar-item{
+    text-align: right;
+    transition: color 0.5s linear;
+    font-size: 110%;
+}
+.navbar-item:hover{
+    color: #90e0ef;
+}
+header .jumbotron{
+    border-top:3px solid #C77DFF;
+    background:linear-gradient(to top right, #5A189A , #240046) ;
+    padding: 10px 0px;
+}
+@media screen and (min-width:992px) {
+    header .jumbotron{
+        padding: 40px 0px;
+    }
+}
+h1{
+    font-family: 'Quicksand', sans-serif;
+}
+img[alt="profile_pic"]{
+    width: 100%;
+    border: 3px solid #240046;
+}
+header p{
+    opacity: 0%;
+}
+#SayHello{
+    text-align: center;
+    font-size: 170%;
+}
+.intro1, .intro2{
+    font-weight: light;
+}
+.intro1{
+    animation:list-enter 0.5s linear 9s forwards;
+}
+.intro2{
+    animation:list-enter 0.5s linear 10s forwards;
+}
+@media screen and (min-width:576px) {
+    .intro1, .intro2{
+        font-size: 120%;
+    }
+    #SayHello{
+        font-size: 200%;
+    }
+}
+
+.intro h1 {
+  overflow: hidden;
+  border-right: .15em solid #C77DFF; 
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .08em; /* Adjust as needed */
+  animation: 
+    typing 2s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #C77DFF;
+ }
+}
+
+@keyframes moveOnMain{
+    0%{
+        opacity: 1;
+        height: 100vh;
+    }
+    100%{
+        opacity: 0;
+        height: 0vh; 
+    }
+}
+
+@keyframes for2nd{
+    0%{
+        font-size: 50%;
+        opacity: 0;
+    }
+    90%{
+        font-size: 230%;
+        opacity: 0.95;
+    }
+    100%{
+        font-size: 200%;
+        opacity: 1;
+    }
+}
+@keyframes for3rd{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.intro{
+    height: 100vh;
+    animation: moveOnMain 1s linear 5s forwards;
+    display: none;
+}
+
+.first1{
+    text-align: center;
+    margin-top: 50px;
+}
+.first2, .first3{
+    font-size: 180%;
+    margin-top: 75px;
+}
+.first2{
+    opacity: 0;
+    text-align: right;
+    animation: for3rd 1s ease-in-out 2s forwards;
+
+}
+.first3{
+    font-size: 0;
+    text-align: left;
+    opacity: 0;
+    animation: for2nd 1s ease-in-out 3s forwards;
+}
+.hi{
+    color: #C77DFF    ;
+}
+.skill{
+    color: #90e0ef;
+}
+#nav-home-tab, #nav-profile-tab, #nav-contact-tab{
+    background-color: transparent;
+    font-size: 130%;
+    color: white;
+}
+#nav-home-tab:hover, #nav-profile-tab:hover, #nav-contact-tab:hover{
+    border: none !important;
+    color: lightpink;
+    transition: color 0.5s linear;
+}
+#nav-tab{
+    margin-top: 10px;
+    border-bottom: none !important; 
+}
+#nav-tab>.active{
+    color: #E0AAFF;
+    text-shadow: 0 0 10px #CEA7EE;
+    font-size: 145%;
+    margin-bottom: -3px;
+    border:none !important;
+    border-bottom: 4px solid #CEA7EE !important;
+
+}
+
+section{
+    margin-top: 5%;
+}
+.tab-content{
+    margin-top: -15px;
+    height: 200px;
+    padding: 20px;
+    background:linear-gradient(to top right, #CEA7EE, #5A189A);
+}
+.tab-content h1{
+    color: #495057;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    float: left;
+    margin-left: -20px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+.eduBg .jumbotron{
+    background:linear-gradient(to top right, #CEA7EE, #5A189A);
+    padding: 20px;
+}
+.odd-row h2,.even-row h2{
+    font-size: 160%;
+    font-weight: light;
+    width: auto;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+.even-row, .odd-row{
+    margin-bottom: 20px;
+}
+@media screen and (min-width:768px) {
+    .even-row, .odd-row{
+        height: 180px;
+    }
+}
+figcaption{
+    font-size: 120%;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+}
+.even-row figcaption{
+    color:whitesmoke;
+}
+figure{
+    text-align: center;
+}
+figure img{
+    width: 50%;
+}
+#skill-mob-content figure img{
+    width: 90%;
+}
+.fade{
+    opacity: 0;
+}
+.blk-icons{
+    display: block;
+    text-align: center;
+    width: 84px;
+    margin: 0 auto;
+}
+@media screen and (min-width:768px) {
+   .blk-icons{
+       width: auto;
+   }
+}
+.blk-icons image{
+    width: 20%;
+}
