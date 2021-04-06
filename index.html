@@ -2,13 +2,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulkit Ahuja dot Me</title>
+    <title>Pulkit-Ahuja.Me</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
     </style>
 
@@ -59,7 +60,7 @@
                         <p class="intro1">A budding <span class="skill">computer engineer</span> and <span class="skill">developer</span>, currently pursuing computer science as a sophomore at
                             NSUT, Delhi, India.
                         </p>
-                        <p class="intro2">
+                        <p class="intro2 d-none d-sm-block">
                             I am good at <span class="skill">problem solving</span> and <span class="skill">analytical thinking</span>. I participate in coding contests regularly to brush
                             up my core DSA skills, simultaneously working on my development skills to build eye-catching and usable websites.
                         </p>
@@ -251,7 +252,7 @@
         <div class="jumbotron ">
             <div class="container">
                 <div class="row">
-                    <div class="certificate col-10 offset-1 offset-sm-0 col-sm-6 col-md-6 col-lg-4">
+                    <div class="certificate col-12 col-sm-6 col-md-6 col-lg-4">
                         <a href="./images/Hashcode.PNG" target="_blank">
                         <div class="card">
                             <img class="card-img-top" src="./images/Hashcode.PNG" alt="Hashcode certificate">
@@ -262,7 +263,7 @@
                           </div>
                         </a>
                     </div>
-                    <div class="certificate col-10 offset-1 offset-sm-0 col-sm-6 col-md-6 col-lg-4">
+                    <div class="certificate col-12 col-sm-6 col-md-6 col-lg-4">
                         <a href="https://www.hackerrank.com/certificates/3101f97e0d5f" target="_blank">
                         <div class="card">
                             <img class="card-img-top" src="./images/hackkerank.PNG" alt="Hackerrank Problem Solving Certificate">
@@ -273,7 +274,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="certificate col-10 offset-1 offset-sm-0 col-sm-6 col-md-6 col-lg-4">
+                    <div class="certificate col-12  col-sm-6 col-md-6 col-lg-4">
                         <a href="https://coursera.org/share/1e04fe66e08efcbed0887f89831292e6" target="_blank">
                         <div class="card">
                             <img class="card-img-top" src="./images/react.jpg" alt="Hashcode certificate">
@@ -290,12 +291,23 @@
         </div>
     </section>
     <section class="projects">
-        <h1>My<br/>Projects</h1>
-        <div id="project1" class="project">
+        <h1>My<br class="d-none"/> Projects</h1>
+        <div id="project1" class="project d-none d-md-block">
         </div>
-        <div id="project2" class="project">
+        <div id="project2" class="project d-none d-md-block">
         </div>
-        <div id="project3" class="project">
+        <div id="project3" class="project d-none d-md-block">
+        </div>
+        <div class="container d-md-none">
+            <div class="row">
+                <div class="col-8">
+                    <div id="project1-mob"></div>
+                </div>
+                <div class="col-4">
+                    <div id="project2-mob"></div>
+                    <div id="project3-mob"></div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="interests">
@@ -336,10 +348,40 @@
             <div class="clear"></div> 
     </section>
     </div>
-    
+    <footer>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                    <h2>It's your turn to say Hello!</h2>
+                    </div>
+                </div>
+                <div class="spacing"></div>
+                <div class="row">
+                    <div class="mail-form col-12 col-md-6">
+                        <form action="mailto:pulkitahuja2431@gmail.com" method="POST" enctype="multipart/form-data" name="EmailForm">
+                            <input type="text" name="name" placeholder="Name" required class="form-control">
+                            <input type="text" name="mail-body" required placeholder="Say Hi" class="form-control">
+                            <div class="spacing"></div>
+                            <input type="submit">
+                        </form>
+                    </div>
+                    <div class="social-links col-12 col-md-6">
+                        <h4>Here's the social me!</h4>
+                        <br/>
+                        <a href="https://www.facebook.com/pulkit.ahuja.5437/"><i class="fab fa-facebook fa-2x"></i></a> &ensp;&ensp;
+                        <a href="https://www.instagram.com/ahuja_pulkit_/"><i class="fab fa-instagram fa-2x"></i></i></a>&ensp;&ensp;
+                        <a href="https://github.com/Pulkit-Ahuja"><i class="fab fa-github fa-2x"></i></a>&ensp;&ensp;
+                        <a href="https://www.linkedin.com/in/pulkit-ahuja-00b6681b4/"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <div class="spacing"></div>
+                        <a href="mailto:pulkitahuja2431@gmail.com">pulkitahuja2431@gmail.com</a>
+                    </div>
+                </div>
+            </div>
 
-
-
+            
+        </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

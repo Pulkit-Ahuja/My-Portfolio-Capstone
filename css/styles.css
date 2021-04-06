@@ -1,3 +1,6 @@
+*{
+    user-select: none;
+}
 html{
     overflow: hidden;
     height: 100%;
@@ -43,6 +46,9 @@ nav{
     color: #90e0ef;
 }
 header .jumbotron{
+    margin-bottom: 0px;
+}
+header .jumbotron, footer .jumbotron{
     border-top:3px solid #C77DFF;
     background:linear-gradient(to top right, #5A189A , #240046) ;
     padding: 10px 0px;
@@ -143,7 +149,7 @@ header p{
 .intro{
     height: 100vh;
     animation: moveOnMain 1s linear 5s forwards;
-    display: none;
+    /* display: none; */
 }
 
 .first1{
@@ -227,6 +233,7 @@ header p{
 }
 
 .skills{
+    border-top:3px solid #C77DFF;
     padding-top: 40px;
     background: url('../images/skills.png');
     background-position: center;
@@ -241,9 +248,7 @@ header p{
     margin: 0px auto;
     margin-bottom: 20px;
 }
-.even-row, .odd-row{
-    margin-bottom: 20px;
-}
+
 @media screen and (min-width:768px) {
     .even-row, .odd-row{
         height: 180px;
@@ -274,6 +279,7 @@ figure img{
     width: 90%;
 }
 
+
 .blk-icons{
     display: block;
     text-align: center;
@@ -290,7 +296,8 @@ figure img{
 }
 
 .jumbotron, .jumbotron-fluid{
-    margin: 0px;
+    background-color: transparent;
+    padding: 20px;
 }
 .certifications, .projects, .interests{
     background:url('../images/certif.png');
@@ -350,9 +357,15 @@ figure img{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 50px;
-    height:400px;
+    padding-top: 30px;
+    height: 550px;
 
+}
+@media (min-width:768px){
+    .projects{
+        height:400px;
+        padding-top: 50px;
+    }
 }
 .project{
     position: absolute;
@@ -360,7 +373,7 @@ figure img{
     width:300px;
     border-radius: 5px;
     border: 1px solid #242424;
-    box-shadow: 0px 0px 5px wheat;
+    box-shadow: 0px 0px 5px white;
     cursor: pointer;
 }
 #project1{
@@ -394,12 +407,18 @@ figure img{
     z-index: 3;
 }
 .projects h1{
-    writing-mode: vertical-rl;
-    float: right;
-    text-align: right;
-    padding-top: 150px;
+    float: none;
+    text-align: center;
+    margin-bottom: 20px;
 }
-
+@media (min-width:768px){
+    .projects h1{
+        writing-mode: vertical-rl;
+        float: right;
+        text-align: right;
+        padding-top: 150px;
+    }
+}
 @keyframes moveToP1{
     0%{
         top:150px;
@@ -464,6 +483,75 @@ figure img{
     top: 220px;
     left:75vw;
 }
-@media (min-width:768px){
-    
+
+#project1-mob, #project2-mob, #project3-mob{
+    border-radius: 10px;
+    border: 1px solid white;
+}
+#project1-mob{
+    background: url('../images/Exp-manager-mob.PNG');
+    height: 380px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#project2-mob{
+    background: url('../images/network-mob.png');
+    height: 185px;
+    margin-bottom: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#project3-mob{
+    background: url('../images/mail-mob.PNG');
+    height: 185px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+footer .jumbotron{
+    margin: 0px;
+}
+footer h2{
+    text-align: center;
+}
+form{
+    width: 100%;
+}
+.spacing{
+    height: 30px;
+}
+form input{
+    margin-bottom: 15px;
+    border-radius: 0px !important;
+    border: none !important;
+    border-bottom: 1px solid white !important;
+    background-color:transparent !important;
+    color: white !important;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.social-links, .mail-form{
+    text-align: center;
+}
+input:focus{
+    box-shadow: none !important;
+}
+input::placeholder{
+    color: white !important;
+}
+input[type="submit"]{
+    border: none !important;
+    color: #5A189A !important;
+    background-color: white !important;
+    width: 84px;
+    height: 40px;
+    border-radius: 10px !important;
+    font-size: 400 !important;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+input[type="text"]:valid{
+    background-color: transparent !important;
+}
+input[type="submit"]:hover{
+    background-color: #b967f8 !important;
+    color: white !important;
 }
