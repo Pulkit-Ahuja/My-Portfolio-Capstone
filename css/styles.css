@@ -54,24 +54,19 @@ header .jumbotron, footer .jumbotron{
     padding: 10px 0px;
 }
 
-@media screen and (min-width:992px) {
-    header .jumbotron{
-        padding: 40px 0px;
-    }
-}
 h1{
     font-family: 'Quicksand', sans-serif;
 }
 img[alt="profile_pic"]{
     width: 100%;
-    border: 3px solid #240046;
 }
 header p{
     opacity: 0%;
 }
 #SayHello{
     text-align: center;
-    font-size: 170%;
+    font-size: 200%;
+    margin-top: 30px;
 }
 .intro1, .intro2{
     font-weight: light;
@@ -80,14 +75,18 @@ header p{
     animation:list-enter 0.5s linear 9s forwards;
 }
 .intro2{
-    animation:list-enter 0.5s linear 10s forwards;
+    animation:list-enter 0.5s linear 9.5s forwards;
 }
+.intro1, .intro2{
+    font-size: 110%;
+}
+
 @media screen and (min-width:576px) {
     .intro1, .intro2{
         font-size: 120%;
     }
     #SayHello{
-        font-size: 200%;
+        font-size: 250%;
     }
 }
 
@@ -149,7 +148,7 @@ header p{
 .intro{
     height: 100vh;
     animation: moveOnMain 1s linear 5s forwards;
-    /* display: none; */
+    display: none;
 }
 
 .first1{
@@ -212,15 +211,15 @@ header p{
     border: 2px solid #CEA7EE;
     box-shadow: 0 0 10px #CEA7EE;
 }
-.tab-content h1, .certifications h1, .projects h1, .interests h1, #skill-mobile h1{
+.tab-content h2, .certifications h2, .projects h2, .interests h2, #skill-mobile h2{
     color: white;
     font-weight: bold;
-    font-size: 250%;
+    font-size: 220%;
     opacity: 0.8;
     text-align:center;
 }
 @media (min-width:992px){
-    .tab-content h1{
+    .tab-content h2{
         writing-mode: vertical-rl;
         float: right;
         text-align: left;
@@ -235,32 +234,36 @@ header p{
 .skills{
     border-top:3px solid #C77DFF;
     padding-top: 40px;
-    background: url('../images/skills.png');
+    background: url('../images/mobile-skill.png');
+    /* background: black; */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-
-.odd-row h2,.even-row h2{
-    font-size: 160%;
-    font-weight: light;
-    width: auto;
-    margin: 0px auto;
+@media (min-width:992px){
+    .skills{
+        background: url('../images/skills.png');
+    }
+}
+.odd-row h3,.even-row h3{
+    font-size: 170%;
+    font-weight: 700;
+    width: 100%;
     margin-bottom: 20px;
 }
-
 @media screen and (min-width:768px) {
     .even-row, .odd-row{
         height: 180px;
     }
 }
+
 figcaption{
     font-size: 120%;
     color: black;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
 }
-.even-row figcaption{
+.even-row figcaption, .odd-row figcaption{
     color:whitesmoke;
 }
 figure{
@@ -272,32 +275,43 @@ figure{
 .web-tools-pane figure{
     padding-top:30px ;
 }
-figure img{
-    width: 50%;
-}
-#skill-mob-content figure img{
-    width: 90%;
+@media (min-width:992px){
+    figure img{
+        width: 70%;
+    }
 }
 
+#skill-mob-content figure img{
+   width: 60px;
+}
 
 .blk-icons{
     display: block;
     text-align: center;
-    width: 84px;
     margin: 0 auto;
 }
-@media screen and (min-width:768px) {
-   .blk-icons{
-       width: auto;
+@media screen and (min-width:576px) and (max-width:992px) {
+    #skill-mob-content figure img, .blk-icons{
+       width: 80%;
    }
 }
-.blk-icons image{
-    width: 20%;
+@media screen and (min-width:992px){
+    .tab-content figure img{
+       width: 120px;
+   }
+   #nav-tools img{
+        width: 80px;
+   }
+   #nav-tools{
+       margin-top: -20px;
+   }
 }
 
+
 .jumbotron, .jumbotron-fluid{
-    background-color: transparent;
     padding: 20px;
+    margin:0px;
+    background-color: transparent;
 }
 .certifications, .projects, .interests{
     background:url('../images/certif.png');
@@ -307,21 +321,18 @@ figure img{
     padding-top: 30px;
 }
 .certifications .jumbotron{
-    /* background:linear-gradient(to top right, #CEA7EE, #5A189A); */
     background: transparent;
     margin: 10px;
     margin-bottom: 30px;
     padding: 20px;
     border-radius: 10px;
-    /* border: 2px solid #CEA7EE; */
-    /* box-shadow: 0 0 10px #CEA7EE; */
 }
-.certifications h1{
+.certifications h2{
     writing-mode: horizontal-tb;
     
 }
 @media(min-width:768px){
-    .certifications h1{
+    .certifications h2{
         writing-mode: vertical-rl;
         transform: rotate(180deg);
         float: left;
@@ -339,7 +350,7 @@ figure img{
 }
 .certificate img{
     width: 100%;
-    height: 200px;
+    height: 150px;
 }
 .card-body{
     opacity: 0.7;
@@ -406,13 +417,13 @@ figure img{
     background-color: #240046;
     z-index: 3;
 }
-.projects h1{
+.projects h2{
     float: none;
     text-align: center;
     margin-bottom: 20px;
 }
 @media (min-width:768px){
-    .projects h1{
+    .projects h2{
         writing-mode: vertical-rl;
         float: right;
         text-align: right;
@@ -460,7 +471,7 @@ figure img{
     padding-top: 0px;
     margin-top: 0px;
 }
-.interests h1{
+.interests h2{
     position: absolute;
     writing-mode:horizontal-tb;
     top:25px;
@@ -482,6 +493,8 @@ figure img{
     position: absolute;
     top: 220px;
     left:75vw;
+    font-size: 150%;
+    font-weight: 400;
 }
 
 #project1-mob, #project2-mob, #project3-mob{
@@ -554,4 +567,10 @@ input[type="text"]:valid{
 input[type="submit"]:hover{
     background-color: #b967f8 !important;
     color: white !important;
+}
+.odd-row h3{
+    text-align: left;
+}
+.even-row h3{
+    text-align: right;
 }
