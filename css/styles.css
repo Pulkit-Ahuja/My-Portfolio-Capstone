@@ -303,11 +303,13 @@ figure{
     background-color: transparent;
 }
 .certifications, .projects, .interests{
-    background:url('../images/certif.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding-top: 30px;
+}
+.certifications{
+    background:url('../images/certif.png');
 }
 .certifications .jumbotron{
     background: transparent;
@@ -415,7 +417,6 @@ figure{
 
 .interests{
     position: relative;
-    background: url('../images/interests.png');
     background-position: center;
     background-position: center;
     background-size: cover;
