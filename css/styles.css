@@ -348,12 +348,25 @@ figure{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding-top: 30px;
-    height: 550px;
-
+    padding: 30px 0px;
+    height: 300px
+}
+.coming-soon{
+    width: 100%;
+    height:100%;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px 0px;
+    height:190px;
+    vertical-align: middle;
+    font-family: 'Playball', cursive;
+    font-size: 250%;
+    
 }
 
-.project{
+/* .project{
     position: absolute;
     height: 200px;
     width:300px;
@@ -396,7 +409,7 @@ figure{
     float: none;
     text-align: center;
     margin-bottom: 20px;
-}
+} */
 
 .interests{
     position: relative;
@@ -433,29 +446,7 @@ figure{
     font-weight: 400;
 }
 
-#project1-mob, #project2-mob, #project3-mob{
-    border-radius: 10px;
-    border: 1px solid white;
-}
-#project1-mob{
-    background: url('../images/Exp-manager-mob.PNG');
-    height: 380px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#project2-mob{
-    background: url('../images/network-mob.png');
-    height: 185px;
-    margin-bottom: 10px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-#project3-mob{
-    background: url('../images/mail-mob.PNG');
-    height: 185px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 footer .jumbotron{
     margin: 0px;
 }
@@ -536,14 +527,12 @@ input[type="submit"]:hover{
         text-align: left;
     }
     .projects{
-        height:400px;
-        padding-top: 50px;
+        height: 250px;
     }
     .projects h2{
         writing-mode: vertical-rl;
         float: right;
         text-align: right;
-        padding-top: 150px;
     }
     #navbar{
         height: 80px;

@@ -14,12 +14,12 @@ function sound(src) {
   }
 var opened = false;
 $(document).ready(() => {
-    mysound = new sound("sounds/curtain.mp3");
+    mysound = new sound("sounds/shutter.wav");
     $(window).scroll(()=>{
         windowBottom = $(window).scrollTop() + $(window).height();
         objectTop = $('#first-cert').offset().top;
-        if (windowBottom - objectTop >= 100 && opened === false){
-            // mysound.play();
+        if (windowBottom - objectTop >= 150 && opened === false){
+            mysound.play();
             $('.card').each(function(){
                 console.log(this);
                 $(this).animate({width:"100%"}, {duration:1000, queue:false});
