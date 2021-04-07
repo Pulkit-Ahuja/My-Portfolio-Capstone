@@ -162,9 +162,7 @@ header p{
   border-right: .15em solid #C77DFF; 
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: .08em; /* Adjust as needed */
-  animation: 
-    typing 2s steps(40, end),
-    blink-caret .75s step-end infinite;
+  animation: for3rd 2s linear forwards;
 }
 
 .intro{
@@ -173,10 +171,12 @@ header p{
 }
 
 .first1{
+    font-weight: bold;
     text-align: center;
     margin-top: 50px;
 }
 .first2, .first3{
+    font-weight: bold;
     font-size: 180%;
     margin-top: 75px;
 }
