@@ -31,11 +31,6 @@ function typewriter()
 }
 setTimeout("typewriter()", 6000);
 
-setTimeout(function(){
-    $('body').animate({"background": "black"}, 500);
-}, 5500);
-
-
 $(function(){
     var scroll = $(document).scrollTop();
     var navHeight = $('#navbar').outerHeight();

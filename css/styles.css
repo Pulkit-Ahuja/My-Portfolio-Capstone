@@ -74,6 +74,7 @@ html{
     overflow: auto;
 }
 body{
+    height: 100%;
     color: #F7E9FF;
     overscroll-behavior: none;
     background: url('../images/fernando-hernandez-lVuV7AcfOrY-unsplash.png') #242424;
@@ -82,6 +83,9 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Quicksand', sans-serif;
+}
+#main-content{
+    display: none;
 }
 nav{
     padding:15px;
@@ -141,18 +145,17 @@ header p{
     font-size: 200%;
     margin-top: 30px;
 }
-.intro1, .intro2{
+#intro1, #intro2{
+    font-size: 110%;
     font-weight: light;
 }
-.intro1{
-    animation:list-enter 0.5s linear 9s forwards;
+#intro1{
+    animation:list-enter 1s linear 4s forwards;
 }
-.intro2{
-    animation:list-enter 0.5s linear 9.5s forwards;
+#intro2{
+    animation:list-enter 1s linear 5s forwards;
 }
-.intro1, .intro2{
-    font-size: 110%;
-}
+
 
 .intro h1 {
   overflow: hidden;
@@ -167,7 +170,6 @@ header p{
 .intro{
     height: 100vh;
     animation: moveOnMain 1s linear 5s forwards;
-    display: none;
 }
 
 .first1{
@@ -506,7 +508,7 @@ input[type="submit"]:hover{
 /* media queries here */
 
 @media screen and (min-width:576px) {
-    .intro1, .intro2{
+    #intro1, #intro2{
         font-size: 120%;
     }
     #SayHello{
@@ -580,38 +582,3 @@ input[type="submit"]:hover{
 
 
 
-
-
-/* extra content */
-@keyframes moveToP1{
-    0%{
-        top:150px;
-        left:calc(50vw - 175px - 300px + 107px);
-        height: 200px;
-        width: 300px;
-        z-index: 1;
-    }
-    100%{
-        top: 50px;
-        left: calc(50vw - 175px);
-        height: 250px;
-        width: 350px;
-        z-index: 8;
-    }
-}
-@keyframes moveToP2{
-    100%{
-        top:150px;
-        left:calc(50vw - 175px - 300px + 107px);
-        height: 200px;
-        width: 300px;
-        z-index: 8;
-    }
-    0%{
-        top: 50px;
-        left: calc(50vw - 175px);
-        height: 250px;
-        width: 350px;
-        z-index:1;
-    }
-}

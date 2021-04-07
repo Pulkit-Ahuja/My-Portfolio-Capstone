@@ -13,19 +13,21 @@ function sound(src) {
     }
   }
 var opened = false;
+
+
 $(document).ready(() => {
     mysound = new sound("sounds/shutter.wav");
     $(window).scroll(()=>{
-        windowBottom = $(window).scrollTop() + $(window).height();
-        objectTop = $('#first-cert').offset().top;
-        if (windowBottom - objectTop >= 150 && opened === false){
+        var windowBottom = $(window).scrollTop() + $(window).height();
+        var objectTop = $('#first-cert').offset().top;
+        var windowTop = $(window).scrollTop();
+        var objectBottom = $('#first-cert').offset().top + $(this).outerHeight();
+        if (windowBottom - objectTop >= 150 && objectBottom >= windowTop && objectTop != 0 && opened === false){
             mysound.play();
             $('.card').each(function(){
-                console.log(this);
                 $(this).animate({width:"100%"}, {duration:1000, queue:false});
             });
             $('.card-body').each(function(){
-                console.log(this);
                 $(this).animate({opacity:1}, {duration:1000, queue:false});
             });
             opened = true;

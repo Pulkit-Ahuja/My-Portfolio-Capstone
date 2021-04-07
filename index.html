@@ -16,8 +16,6 @@
 
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <style>
-    </style>
 </head>
 <body>
     <div id="scroll-trigger">
@@ -40,7 +38,7 @@
             </div>
         </div>
     </div>
-    <div class="main-content">
+    <div id="main-content">
     <header id="introduction">
         <nav id="navbar">
             <div class="container">
@@ -70,10 +68,10 @@
                     <div class="col-10 offset-1 col-sm-12 offset-sm-0 col-md-7 col-lg-9">
                         <h1 id="SayHello">Hi, This is Pulkit Ahuja</h1>
                         <br>
-                        <p class="intro1">A budding <span class="skill">computer engineer</span> and <span class="skill">developer</span>, currently pursuing computer science as a sophomore at
+                        <p id="intro1">A budding <span class="skill">computer engineer</span> and <span class="skill">developer</span>, currently pursuing computer science as a sophomore at
                             NSUT, Delhi, India.
                         </p>
-                        <p class="intro2 d-none d-lg-block">
+                        <p id="intro2" class="d-none d-lg-block">
                             I am good at <span class="skill">problem solving</span> and <span class="skill">analytical thinking</span>. I participate in coding contests regularly to brush
                             up my core DSA skills, simultaneously working on my development skills to build eye-catching and usable websites.
                         </p>
@@ -394,5 +392,10 @@
     <script src="js/curtain-open.js"></script>
     <script src="js/script.js" ></script>
     <script src="js/fade-down.js"></script>
+    <script>
+        setTimeout(function(){
+            $('#main-content').css("display", "block");
+        }, 5000);
+    </script>
 </body>
 </html>
