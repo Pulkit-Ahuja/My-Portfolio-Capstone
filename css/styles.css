@@ -92,7 +92,23 @@ nav{
     font-variant: small-caps;
     font-family: 'Quicksand', sans-serif;
 }
-
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: top 0.6s;
+    background: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    width: 100%;
+    height:60px;
+}
+#navbar.animate{
+    top:-80px;
+}
+#navbar.sticky{
+    top:0;
+    z-index: 99;
+}
 .navbar-item{
     text-align: right;
     transition: color 0.5s linear;
@@ -102,6 +118,7 @@ nav{
     color: #90e0ef;
 }
 header .jumbotron{
+    margin-top: 60px;
     margin-bottom: 0px;
 }
 header .jumbotron, footer .jumbotron{
@@ -179,6 +196,7 @@ header p{
 .skill{
     color: #90e0ef;
 }
+
 #nav-gen-lang-tab, #nav-spc-lang-tab, #nav-tools-tab{
     background-color: transparent;
     font-size: 130%;
@@ -298,23 +316,25 @@ figure{
 }
 .certifications h2{
     writing-mode: horizontal-tb;
-    
 }
 
 .certificate .card{
-    width: 100%;
-    /* box-shadow: 0px 0px 10px white; */
+    width: 0%;
+    margin: 0 auto;
     background-color: transparent;
     border-radius: 0px 0px 10px 10px;
     margin-bottom: 10px;
+}
+.certificate .card:hover{
+    width:100%;
 }
 .certificate img{
     width: 100%;
     height: 150px;
 }
 .card-body{
-    opacity: 0.7;
-    background-color: white;
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.7);
     height: 100px;
     padding: 10px;
     border-radius: 0px 0px 10px 10px;
@@ -525,6 +545,12 @@ input[type="submit"]:hover{
         text-align: right;
         padding-top: 150px;
     }
+    #navbar{
+        height: 80px;
+    }
+    header .jumbotron{
+        margin-top: 80px;
+    }
 }
 
 @media screen and (min-width:576px) and (max-width:992px) {
@@ -554,6 +580,12 @@ input[type="submit"]:hover{
     }
     #nav-tools{
         margin-top: -20px;
+    }
+    #navbar{
+        height: 60px;
+    }
+    header .jumbotron{
+        margin-top: 60px;
     }
 }
 
