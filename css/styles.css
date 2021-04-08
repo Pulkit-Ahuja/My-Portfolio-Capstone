@@ -70,7 +70,6 @@ a:hover, a:active, a{
 html{
     height: 100%;
     scroll-behavior: smooth;
-    overscroll-behavior: none;
     overflow: auto;
     overflow-x: hidden;
 }
