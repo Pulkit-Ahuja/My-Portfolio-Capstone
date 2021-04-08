@@ -198,7 +198,6 @@ header p{
 .intro{
     height: 100vh;
     animation: moveOnMain 1s linear 5s forwards;
-    display: none;
 }
 
 .first1{
