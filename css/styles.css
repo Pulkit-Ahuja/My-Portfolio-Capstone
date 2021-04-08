@@ -8,6 +8,25 @@
     }
 }
 
+/* for website brand */
+@keyframes move-sideways{
+    0%{
+        width: 2%;
+        left: 0%;
+    }
+    25%{
+        width: 10%;
+        left: 40%;
+    }
+    50%{
+        width: 0%;
+        left: 80%;
+    }
+    100%{
+        width: 0%;
+        left: 80%;
+    }
+}
 /* The typing effect */
 @keyframes typing {
     from { width: 0 }
@@ -123,6 +142,17 @@ nav{
     font-weight: bold;
     font-variant: small-caps;
     font-family: 'Quicksand', sans-serif;
+}
+#brand-layer{
+    position: absolute;
+    top:0;
+    left: 0%;
+    height:100%;
+    width: 2%;
+    transform: skewX(-25deg);
+    background-color: rgba(0, 255, 255, 0.507);
+    z-index: 99;
+    animation: move-sideways 3s linear 1.5s infinite ;
 }
 #navbar{
     position: fixed;
