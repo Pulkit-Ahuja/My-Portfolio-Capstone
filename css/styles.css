@@ -96,7 +96,6 @@ html{
 body{
     height: 100%;
     color: #F7E9FF;
-    overscroll-behavior: none;
     background: url('../images/fernando-hernandez-lVuV7AcfOrY-unsplash.png') #242424;
     background-size: cover;
     background-position: center;
@@ -281,6 +280,7 @@ header p{
 #nav-gen-lang-tab, #nav-spc-lang-tab, #nav-tools-tab{
     background-color: transparent;
     font-size: 130%;
+    font-weight: bold;
     color: white;
     transition: color 0.5s linear;
 }
@@ -294,7 +294,7 @@ header p{
     border-bottom: none !important; 
 }
 #nav-tab>.active{
-    color: #E0AAFF;
+    color: #63d0ec;
     /* text-shadow: 0 0 10px #CEA7EE; */
     font-size: 145%;
     margin-bottom: -3px;
@@ -660,7 +660,10 @@ input[type="submit"]:hover{
         margin-left: 0px;
     }
     .skills{
-        background: url('../images/skills.png');
+        background: url('../images/skill-rep.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     figure img{
         width: 70%;
@@ -676,6 +679,3 @@ input[type="submit"]:hover{
     }
     
 }
-
-
-
