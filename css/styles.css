@@ -86,9 +86,9 @@ body{
     background-attachment: fixed;
     font-family: 'Quicksand', sans-serif;
 }
-#main-content{
+/* #main-content{
     display: none;
-}
+} */
 nav{
     padding:15px;
 }
@@ -234,11 +234,11 @@ header p{
     background-color: transparent;
     font-size: 130%;
     color: white;
+    transition: color 0.5s linear;
 }
 #nav-gen-lang-tab:hover, #nav-spc-lang-tab:hover, #nav-tools-tab:hover{
     border: none !important;
     color: lightpink;
-    transition: color 0.5s linear;
 }
 #nav-tab{
     margin: 0px 5px;
@@ -280,7 +280,7 @@ header p{
 .skills{
     border-top:3px solid #C77DFF;
     padding-top: 40px;
-    background: url('../images/mobile-skill.png');
+    background: url('../images/skills.png');
     /* background: black; */
     background-position: center;
     background-repeat: no-repeat;
@@ -599,9 +599,10 @@ input[type="submit"]:hover{
 
 @media screen and (min-width:576px) and (max-width:992px) {
     #skill-mob-content figure img, .blk-icons{
-       width: 80%;
+       width:70px
    }
 }
+
 
 @media (min-width:992px){
     .tab-content h2{
@@ -611,7 +612,7 @@ input[type="submit"]:hover{
         margin-left: 0px;
     }
     .skills{
-        background: url('../images/skills.png');
+        background: url('../images/mobile-skill.png');
     }
     figure img{
         width: 70%;
