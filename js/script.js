@@ -8,6 +8,7 @@ var iTextPos = 0; // initialise text position
 var sContents = ''; // initialise contents variable
 var iRow; // initialise current row
  
+var is_nav_open = false;
 function typewriter()
 {
  sContents =  ' ';
@@ -54,5 +55,54 @@ $(function(){
         }
 
         scroll = $(document).scrollTop();
+    });
+});
+
+$(document).ready(()=>{
+    var icon = document.getElementById("icon-list");
+    var modal = document.getElementById("nav-view-mobile");
+    var button = document.getElementById("nav-mobile");
+    $('#nav-mobile').click((event)=>{
+        event.stopPropagation();
+        if (is_nav_open === false){
+            console.log("clicked");
+            console.log(is_nav_open);
+            $('#nav-view-mobile').animate({width:"170vw"}, {duration:700, queue:false});
+            $('#nav-view-mobile').animate({height:"170vw"}, {duration:700, queue:false});
+            $('#links-on-mobile').animate({top:"100vw"}, {duration:700, queue:false});
+            $('#links-on-mobile').animate({right:"100vw"}, {duration:700, queue:false});
+            is_nav_open = true;
+        }
+        else{
+            $('#nav-view-mobile').animate({width:"85vw"}, {duration:700, queue:false});
+            $('#nav-view-mobile').animate({height:"85vw"}, {duration:700, queue:false});
+            is_nav_open = false;
+        }
+    });
+    $('#icon-list').click((event)=>{
+        event.stopPropagation();
+        if (is_nav_open === false){
+            console.log("clicked");
+            console.log(is_nav_open);
+            $('#nav-view-mobile').animate({width:"170vw"}, {duration:700, queue:false});
+            $('#nav-view-mobile').animate({height:"170vw"}, {duration:700, queue:false});
+            $('#links-on-mobile').animate({top:"100vw"}, {duration:700, queue:false});
+            $('#links-on-mobile').animate({right:"100vw"}, {duration:700, queue:false});
+            is_nav_open = true;
+        }
+        else{
+            $('#nav-view-mobile').animate({width:"10vw"}, {duration:700, queue:false});
+            $('#nav-view-mobile').animate({height:"10vw"}, {duration:700, queue:false});
+            is_nav_open = false;
+        }
+    });
+    
+    $(window).click(function(event){
+        console.log(event.target);
+        if (event.target !== modal && event.target !== button && event.target != icon) {
+            $('#nav-view-mobile').animate({width:"10vw"}, {duration:700, queue:false});
+            $('#nav-view-mobile').animate({height:"10vw"}, {duration:700, queue:false});
+            is_nav_open = false;
+          }
     });
 });

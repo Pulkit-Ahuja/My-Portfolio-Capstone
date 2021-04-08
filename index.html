@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
-
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
@@ -43,13 +42,23 @@
         <nav id="navbar">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-2"><span class="website-brand"><a href="#introduction">My Portfolio</a></span></div>
-                    <div class="col-md-2 offset-md-2 navbar-item d-none d-md-block"><a href="#skill-container">My Skillset</a></div>
-                    <div class="col-md-2 navbar-item d-none d-md-block"><a href="#certifications-container">Certifications</a></div>
-                    <div class="col-md-2 navbar-item d-none d-md-block"><a href="#projects-container">Projects</a></div>
-                    <div class="col-md-2 navbar-item d-none d-md-block"><a href="#interests-container">Hobbies</a></div>
+                    <div class="col-6 col-lg-2"><span class="website-brand"><a href="#introduction">My Portfolio</a></span></div>
+                    <div class="col-md-2 offset-md-2 navbar-item d-none d-lg-block"><a href="#skill-container">My Skillset</a></div>
+                    <div class="col-md-2 navbar-item d-none d-lg-block"><a href="#certifications-container">Certifications</a></div>
+                    <div class="col-md-2 navbar-item d-none d-lg-block"><a href="#projects-container">Projects</a></div>
+                    <div class="col-md-2 navbar-item d-none d-lg-block"><a href="#interests-container">Hobbies</a></div>
+                    <div class="col-6 d-lg-none text-right"><button id="nav-mobile"><i id="icon-list" class="fas fa-bars fa-2x"></i></button></div>
+                    <div id="nav-view-mobile" class="d-lg-none" >
+                        <div id="links-on-mobile">
+                            <a class="navbar-item" href="#skill-container">My Skillset</a><br/><br/>
+                            <a class="navbar-item" href="#certifications-container">Certifications</a><br/><br/>
+                            <a class="navbar-item" href="#projects-container">Projects</a><br/><br/>
+                            <a class="navbar-item" href="#interests-container">Hobbies</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
         </nav>
         <div class="jumbotron jumbotron-fluid">
             <div class="container justify-content-center">
@@ -393,9 +402,9 @@
     <script src="js/script.js" ></script>
     <script src="js/fade-down.js"></script>
     <script>
-        setTimeout(function(){
-            $('#main-content').css("display", "block");
-        }, 5000);
+        // setTimeout(function(){
+        //     $('#main-content').css("display", "block");
+        // }, 5000);
     </script>
 </body>
 </html>
