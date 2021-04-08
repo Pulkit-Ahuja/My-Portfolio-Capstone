@@ -200,11 +200,30 @@ header p{
     height: 100vh;
     animation: moveOnMain 1s linear 5s forwards;
 }
-
-.first1{
+.sliding-container{
+    position: relative;
+}
+#first-statement{
     font-weight: bold;
+    font-size: 250%;
     text-align: center;
+    padding-top: 50px;
+}
+#sliding-block{
+    position: absolute;
+    height: 50px;
     margin-top: 50px;
+    width: 100%;
+    top:0;
+    left: 0;
+    /* background-color: green; */
+}
+#layer{
+    position: absolute;
+    width: 30%;
+    height: 100%;
+    transform: skewX(-20deg);
+    background-color: #C77DFF;
 }
 .first2, .first3{
     font-weight: bold;
@@ -223,7 +242,7 @@ header p{
     opacity: 0;
     animation: for2nd 1s ease-in-out 3s forwards;
 }
-.hi{
+.hi {
     color: #C77DFF    ;
 }
 .skill{

@@ -22,8 +22,9 @@
     <div class="intro">
         <div class="container">
             <div class="row">
-                <div class="col-12 first1">
-                    <h1><span class="hi">Got a problem to solve?</span></h1>
+                <div class="sliding-container col-12">
+                    <h2 id="first-statement">Got a problem to solve?</h2>
+                    <div id="sliding-block"><div id="layer"></div></div>
                 </div>
                 <div class="col-12 first2">
                     If (True)
@@ -397,13 +398,22 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/git/ui/jquery-ui-git.js"></script>
     <script src="js/curtain-open.js"></script>
     <script src="js/script.js" ></script>
     <script src="js/fade-down.js"></script>
     <script>
-        setTimeout(function(){
+        $(document).ready(()=>{
+            $('#layer').animate({left:"100%"}, {duration:1000, queue:true});
+            $('#layer').animate({left:"0%"}, {duration:1000, queue:true});
+			$('#layer').animate({opacity:0}, {duration:2500, queue:false});
+			$('#first-statement').animate({color:"#C77DFF"}, {duration:2500, queue:false});
+			$('#layer').animate({width:0}, {duration:2000, queue:false});
+            setTimeout(function(){
             $('#main-content').css("display", "block");
-        }, 5000);
+            }, 5000);
+        });
+        
     </script>
 </body>
 </html>
