@@ -86,9 +86,9 @@ body{
     background-attachment: fixed;
     font-family: 'Quicksand', sans-serif;
 }
-/* #main-content{
+#main-content{
     display: none;
-} */
+}
 nav{
     padding:15px;
 }
