@@ -298,7 +298,7 @@ header p{
 .skills{
     border-top:3px solid #C77DFF;
     padding-top: 40px;
-    background: url('../images/skills.png');
+    background: url('../images/mobile-skill.png');
     /* background: black; */
     background-position: center;
     background-repeat: no-repeat;
@@ -630,7 +630,7 @@ input[type="submit"]:hover{
         margin-left: 0px;
     }
     .skills{
-        background: url('../images/mobile-skill.png');
+        background: url('../images/skills.png');
     }
     figure img{
         width: 70%;
