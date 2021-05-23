@@ -24,10 +24,10 @@ $(document).ready(() => {
         var objectBottom = $('#first-cert').offset().top + $(this).outerHeight();
         if (windowBottom - objectTop >= 150 && objectBottom >= windowTop && objectTop != 0 && opened === false){
             mysound.play();
-            $('.card').each(function(){
+            $('.certificate .card').each(function(){
                 $(this).animate({width:"100%"}, {duration:1000, queue:false});
             });
-            $('.card-body').each(function(){
+            $('.certificate .card-body').each(function(){
                 $(this).animate({opacity:1}, {duration:1000, queue:false});
             });
             opened = true;
