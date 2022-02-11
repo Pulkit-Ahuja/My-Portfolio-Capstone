@@ -8,6 +8,25 @@
     }
 }
 
+/* for website brand */
+@keyframes move-sideways{
+    0%{
+        width: 2%;
+        left: 0%;
+    }
+    25%{
+        width: 10%;
+        left: 40%;
+    }
+    50%{
+        width: 0%;
+        left: 80%;
+    }
+    100%{
+        width: 0%;
+        left: 80%;
+    }
+}
 /* The typing effect */
 @keyframes typing {
     from { width: 0 }
@@ -24,11 +43,15 @@ from, to { border-color: transparent }
 @keyframes moveOnMain{
     0%{
         opacity: 1;
-        height: 100vh;
+        margin-top: 0vh;
+    }
+    50%{
+        opacity: 0;
+        margin-top: -50vh;
     }
     100%{
         opacity: 0;
-        height: 0vh; 
+        margin-top: -100vh; 
     }
 }
 
@@ -57,7 +80,14 @@ from, to { border-color: transparent }
         opacity: 1;
     }
 }
-
+@keyframes van{
+    0%{
+        margin-left: -100vw;
+    }
+    100%{
+        margin-left: 0vw;
+    }
+}
 /* main css */
 *{
     user-select: none;
@@ -70,7 +100,6 @@ a:hover, a:active, a{
 html{
     height: 100%;
     scroll-behavior: smooth;
-    overscroll-behavior: none;
     overflow: auto;
     overflow-x: hidden;
 }
@@ -78,7 +107,6 @@ html{
 body{
     height: 100%;
     color: #F7E9FF;
-    overscroll-behavior: none;
     background: url('../images/fernando-hernandez-lVuV7AcfOrY-unsplash.png') #242424;
     background-size: cover;
     background-position: center;
@@ -125,6 +153,17 @@ nav{
     font-variant: small-caps;
     font-family: 'Quicksand', sans-serif;
 }
+#brand-layer{
+    position: absolute;
+    top:0;
+    left: 0%;
+    height:100%;
+    width: 2%;
+    transform: skewX(-25deg);
+    background-color: rgba(0, 255, 255, 0.507);
+    z-index: 99;
+    animation: move-sideways 3s linear 1.5s infinite ;
+}
 #navbar{
     position: fixed;
     top: 0;
@@ -134,6 +173,7 @@ nav{
     overflow: visible;
     width: 100%;
     height:60px;
+    animation: van 5s !important;
 }
 #navbar.animate{
     top:-80px;
@@ -252,6 +292,7 @@ header p{
 #nav-gen-lang-tab, #nav-spc-lang-tab, #nav-tools-tab{
     background-color: transparent;
     font-size: 130%;
+    font-weight: bold;
     color: white;
     transition: color 0.5s linear;
 }
@@ -265,7 +306,7 @@ header p{
     border-bottom: none !important; 
 }
 #nav-tab>.active{
-    color: #E0AAFF;
+    color: #63d0ec;
     /* text-shadow: 0 0 10px #CEA7EE; */
     font-size: 145%;
     margin-bottom: -3px;
@@ -299,7 +340,7 @@ header p{
 .skills{
     border-top:3px solid #C77DFF;
     padding-top: 40px;
-    background: url('../images/skills.png');
+    background: url('../images/mobile-skill.png');
     /* background: black; */
     background-position: center;
     background-repeat: no-repeat;
@@ -372,17 +413,15 @@ figure{
     writing-mode: horizontal-tb;
 }
 
-.certificate .card{
+.certificate .card,.project .card{
     width: 0%;
     margin: 0 auto;
     background-color: transparent;
     border-radius: 0px 0px 10px 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
-.certificate .card:hover{
-    width:100%;
-}
-.certificate img{
+
+.certificate img, .project img{
     width: 100%;
     height: 150px;
 }
@@ -397,73 +436,22 @@ figure{
     border-top: 1px solid black;
 }
 .projects{
-    position: relative;
     background: url('../images/notes.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 30px 0px;
-    height: 300px
-}
-.coming-soon{
-    width: 100%;
-    height:100%;
-    border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: whitesmoke;
-    text-align: center;
-    padding: 20px 0px;
-    height:190px;
-    vertical-align: middle;
-    font-family: 'Playball', cursive;
-    font-size: 250%;
-    
 }
 
-/* .project{
-    position: absolute;
-    height: 200px;
-    width:300px;
-    border-radius: 5px;
-    border: 1px solid #242424;
-    box-shadow: 0px 0px 5px white;
-    cursor: pointer;
-}
-#project1{
-    width: 350px;
-    height: 250px;
-    top: 50px;
-    left: calc(50vw - 175px);
-    background: url('../images/Exp-manager.PNG');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 8;
-    animation: moveToP2 1s ease-out 2s forwards;
-}
-#project2{
-    background: url('../images/network.png');
-    top:150px;
-    left:calc(50vw - 175px - 300px + 107px);
-    background-size: cover;
-    background-repeat: no-repeat;
-    z-index: 1;
-    animation: moveToP1 1s ease-out 2s forwards;
-}
-#project3{
-    top:150px;
-    background:url('../images/mail.PNG');
-    background-size: cover;
-    background-repeat: no-repeat;
-    left:calc(50vw + 175px - 107px);
-    background-color: #240046;
-    z-index: 3;
-}
-.projects h2{
-    float: none;
-    text-align: center;
+.project .card{
+    position: relative;
+    width: 100%;
+    border: 1px solid white;
     margin-bottom: 20px;
-} */
+}
+.project .card-body{
+    border-top: 1px solid white;
+    opacity: 0.7;
+    color: whitesmoke;
+    background-color: black;
+}
+
 
 .interests{
     position: relative;
@@ -580,6 +568,24 @@ input[type="submit"]:hover{
     text-decoration: underline;
 }
 
+.hideOnHover{
+    position: absolute;
+    top: 0;
+    transition: opacity 0.5s;
+}
+.hideOnHover:hover{
+    opacity: 0.1;
+}
+
+.behind{
+    padding: 10px;
+    color: white;
+    background-color: black;
+    opacity: 0.8;
+    font-size: 120%;
+    height: 150px;
+}
+
 /* media queries here */
 
 @media screen and (min-width:576px) {
@@ -603,10 +609,8 @@ input[type="submit"]:hover{
         margin-top: 50px;
         text-align: left;
     }
-    .projects{
-        height: 250px;
-    }
     .projects h2{
+        margin-top: 70px;
         writing-mode: vertical-rl;
         float: right;
         text-align: right;
@@ -631,7 +635,10 @@ input[type="submit"]:hover{
         margin-left: 0px;
     }
     .skills{
-        background: url('../images/mobile-skill.png');
+        background: url('../images/skill-rep.png');
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
     figure img{
         width: 70%;
@@ -647,6 +654,3 @@ input[type="submit"]:hover{
     }
     
 }
-
-
-
